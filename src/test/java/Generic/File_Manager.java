@@ -33,7 +33,7 @@ public class File_Manager
 	
 	public String getPre_url()
 	{
-		String url = prop.getProperty("pre");
+		String url = prop.getProperty("QA");
 		if(url==null)
 		{
 			throw new RuntimeException("url not found");
@@ -43,7 +43,7 @@ public class File_Manager
 	
 	public String getDemo_url()
 	{
-		String url = prop.getProperty("demo");
+		String url = prop.getProperty("QA");
 		if(url==null)
 		{
 			throw new RuntimeException("url not found");

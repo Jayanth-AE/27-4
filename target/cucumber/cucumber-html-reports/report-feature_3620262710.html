@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>23 Apr 2020, 13:56</td>
+      <td>21 May 2020, 21:01</td>
     </tr>
   </tbody>
 </table>
@@ -138,7 +138,7 @@ $(document).ready(function() {
           <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="17979000000">17.979</td>
+          <td class="duration" data-value="11759000000">11.759</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -187,18 +187,18 @@ $(document).ready(function() {
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_4089311534.html">@smoke</a>
+       <a href="report-tag_2149487133.html">@at1</a>
 </div>
 
 
-  <span class="lead-duration duration">17.979</span>
+  <span class="lead-duration duration">11.759</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
 <div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">User login with invalid credentials</span>
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Doctor login with valid credentials</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -229,7 +229,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">StepDefn.FBLoginSteps.setup()</span>
 
-  <span class="lead-duration duration">29.566</span>
+  <span class="lead-duration duration">14.701</span>
 
           </div>
 
@@ -264,7 +264,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">User is on login page</span>
+  <span class="name">User is on Vigorous login page</span>
 
   <span class="lead-duration duration">0.002</span>
 
@@ -291,9 +291,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
-  <span class="name">enters invalid username <span class="argument">&quot;user name&quot;</span> and password <span class="argument">&quot;pass&quot;</span></span>
+  <span class="name">Doc enters valid <span class="argument">&quot;Sin@gmail.com&quot;</span> and <span class="argument">&quot;123456&quot;</span></span>
 
-  <span class="lead-duration duration">1.621</span>
+  <span class="lead-duration duration">0.857</span>
 
 </div>
 
@@ -318,9 +318,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">clicks on login button</span>
+  <span class="name">clicks on login button1</span>
 
-  <span class="lead-duration duration">0.297</span>
+  <span class="lead-duration duration">0.261</span>
 
 </div>
 
@@ -345,9 +345,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
-  <span class="name">verify the title <span class="argument">&quot;Log in to Facebook  Facebook&quot;</span></span>
+  <span class="name">Doc dashboard page should be displayed</span>
 
-  <span class="lead-duration duration">16.059</span>
+  <span class="lead-duration duration">10.639</span>
 
 </div>
 
@@ -359,14 +359,15 @@ $(document).ready(function() {
   <div class="inner-level">
     <div class="message indention">
       <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
-          <a>org.junit.ComparisonFailure:</a>
+          <a>java.lang.AssertionError</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details  in ">
-        <pre>org.junit.ComparisonFailure: expected:&lt;Log in to Facebook [] Facebook&gt; but was:&lt;Log in to Facebook [|] Facebook&gt;
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at StepDefn.FBLoginSteps.verify_the_title(FBLoginSteps.java:81)
-	at &#10045;.verify the title &quot;Log in to Facebook  Facebook&quot;(file:///F:/Manufacturing/Vigorous_Management/src/test/resources/FBLogin.feature:21)
+        <pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.fail(Assert.java:96)
+	at Generic.BasePage.verifyTitle(BasePage.java:72)
+	at StepDefn.FBLoginSteps.doc_dashboard_page_should_be_displayed(FBLoginSteps.java:142)
+	at &#10045;.Doc dashboard page should be displayed(file:///F:/Manufacturing/Vigorous_Management/src/test/resources/FBLogin.feature:40)
 </pre>
       </div>
     </div>
@@ -408,7 +409,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">StepDefn.FBLoginSteps.teardown(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">2.355</span>
+  <span class="lead-duration duration">1.686</span>
 
           </div>
 
@@ -420,8 +421,8 @@ $(document).ready(function() {
   <div class="embeddings inner-level">
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-6" class="collapsable-control">
-      <a>User login with invalid credentials</a>
-      <a href="embeddings/embedding_-278577867.unknown" download target="_blank">
+      <a>Doctor login with valid credentials</a>
+      <a href="embeddings/embedding_-1495636417.unknown" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>

@@ -31,3 +31,13 @@ When User search for product
 |Watches|5       |
 |Jackets|3       |
 Then Product page should be displayed
+
+@at1
+Scenario Outline: Doctor login with valid credentials
+Given User is on Vigorous login page
+When Doc enters valid "<user>" and "<password>"
+And clicks on login button1
+Then Doc dashboard page should be displayed
+Examples:
+|user|password|
+|Sin@gmail.com|123456|

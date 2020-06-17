@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Map;
 
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -17,19 +16,21 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pom.Facebook_login_page;
+import pom.VigorousManagement;
 
 public class FBLoginSteps 
 {
 	WebDriver driver;
 	Browser_Factory bf=new Browser_Factory();
 	Facebook_login_page lp;
+	VigorousManagement vp;
 	@Before(order = 0)		//global hooks
 	public void setup()
 	{
-		driver.manage().deleteAllCookies();
 		driver=bf.open_Browser("chrome");
 		driver.get(new File_Manager().getPre_url());
 		lp=new Facebook_login_page(driver);
+		vp=new VigorousManagement(driver);
 	}
 	
 	@After(order = 0)		//global hooks
@@ -112,5 +113,34 @@ public class FBLoginSteps
 	public void product_page_should_be_displayed() 
 	{
 		System.out.println("product page is displayed");
+	}
+	
+	//@at1
+	
+	@Given("User is on Vigorous login page")
+	public void user_is_on_Vigorous_login_page() 
+	{
+		System.out.println("user is on login page");
+	}
+
+	@When("Doc enters valid {string} and {string}")
+	public void doc_enters_valid_and(String emId, String pwd) 
+	{
+		vp.Enter_email(emId);
+		vp.Enter_password(pwd);
+	}
+
+	@When("clicks on login button1")
+	public void clicks_on_login_button1() 
+	{
+	    vp.Click_on_Submit();
+	}
+
+	@Then("Doc dashboard page should be displayed")
+	public void doc_dashboard_page_should_be_displayed() 
+	{
+		vp.verifyTitle(10, "http://122.166.192.191:9007/index.php?doctor");
+		Assert.assertEquals("http://122.166.192.191:9007/index.php?doctor", driver.getTitle());
+		driver.quit();
 	}
 }
